@@ -39,8 +39,9 @@ function getInfo(ip, callback) {
                     result.hostname = (host && host.length) ? host[0] : null;
                 }
                 arp.getMAC(ip, (err2, mac) => {
-                    if(err2 || !mac) {
+                    if(err2 || !(mac)) {
                         result.macError = 'Error on get Mac address';
+                        result.mac = '';
                     } else {
                         result.mac = mac.replace(/:([^:]{1}):/g, ':0$1:');
                     }

@@ -1,15 +1,14 @@
 {
-  "name": "network-list",
-  "version": "1.1.3",
+  "name": "network-list2",
+  "version": "1.0.0",
   "description": "List all network devices with hostname and vendor",
-  "main": "lib/index.js",
+  "main": "src/index.js",
   "scripts": {
-    "build": "babel src --presets babel-preset-es2015 --out-dir lib",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/suskind/network-list.git"
+    "url": "git+https://github.com/haimkastner/network-list.git"
   },
   "keywords": [
     "network",
@@ -21,18 +20,14 @@
   "author": "Claudio Gamboa <gamboa@pdvel.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/suskind/network-list/issues"
+    "url": "https://github.com/haimkastner/network-list/issues"
   },
-  "homepage": "https://github.com/suskind/network-list#readme",
+  "homepage": "https://github.com/haimkastner/network-list#readme",
   "dependencies": {
     "async": "^2.6.0",
     "ip": "^1.1.5",
     "node-arp": "^1.0.5",
     "ping": "^0.2.2",
     "request": "^2.83.0"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1"
   }
 }
