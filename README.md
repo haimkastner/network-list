@@ -1,9 +1,11 @@
-# network-list
-List all network devices with an hostname and a vendor.
+# network-list2
+List all network devices with an hostname and a vendor. 
+
+This fork based on https://github.com/suskind/network-list and use only to fix crash bugs when using it in linux OS. 
 
 ## Install
 
-`npm install network-list --save`
+`npm install network-list2 --save`
 
 
 ## Methods: 
