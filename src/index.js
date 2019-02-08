@@ -2,7 +2,6 @@
 const async = require('async');
 const ping = require('ping');
 const arp = require('node-arp');
-const dns = require('dns');
 const request = require('request');
 const ip = require('ip');
 
@@ -32,12 +31,6 @@ function getInfo(ip, callback) {
     }).then((res) => {
         if (res.alive) {
             result.alive = true;
-            dns.reverse(ip, (err, host) => {
-                if (err) {
-                    result.hostnameError = 'Error on get hostname';
-                } else {
-                    result.hostname = (host && host.length) ? host[0] : null;
-                }
                 arp.getMAC(ip, (err2, mac) => {
                     if(err2 || !(mac)) {
                         result.macError = 'Error on get Mac address';
@@ -67,7 +60,6 @@ function getInfo(ip, callback) {
                         callback(null, result);
                     }
                 });
-            });
         } else {
             callback(null, result);
         }
