@@ -1,6 +1,6 @@
 {
   "name": "network-list2",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "List all network devices with hostname and vendor",
   "main": "src/index.js",
   "scripts": {
